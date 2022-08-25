@@ -24,13 +24,71 @@ function buildTable(data) {
 }
 
 // 1. Create a variable to keep track of all the filters as an object.
+  function handleClick() {
+    // Grab the datetime value from the filter
+    let date = d3.select("#datetime").property("value");
+    let filteredData = tableData;
+  
+     // Check to see if a date was entered and filter the
+    // data using that date.
+    if (date) {
+      // Apply `filter` to the table data to only keep the
+      // rows where the `datetime` value matches the filter value
+      filteredData = filteredData.filter(row => row.datetime === date);
 
+  function handleClick() {
+      // Grab the datetime value from the filter
+      let city = d3.select("#city").property("value");
+      let filteredData = tableData;
+      
+       // Check to see if a date was entered and filter the
+      // data using that date.
+      if (city) {
+        // Apply `filter` to the table data to only keep the
+        // rows where the `datetime` value matches the filter value
+        filteredData = filteredData.filter(row => row.city === city);
+
+  function handleClick() {
+      // Grab the datetime value from the filter
+      let state = d3.select("#state").property("value");
+      let filteredData = tableData;
+          
+       // Check to see if a date was entered and filter the
+      // data using that date.
+      if (state) {
+        // Apply `filter` to the table data to only keep the
+        // rows where the `datetime` value matches the filter value
+        filteredData = filteredData.filter(row => row.state === state);
+
+  function handleClick() {
+      // Grab the datetime value from the filter
+      let country = d3.select("#country").property("value");
+      let filteredData = tableData;
+          
+       // Check to see if a date was entered and filter the
+      // data using that date.
+      if (country) {
+        // Apply `filter` to the table data to only keep the
+        // rows where the `datetime` value matches the filter value
+        filteredData = filteredData.filter(row => row.country === country);
+
+function handleClick() {
+    // Grab the datetime value from the filter
+    let shape = d3.select("#shape").property("value");
+    let filteredData = tableData;
+          
+     // Check to see if a date was entered and filter the
+    // data using that date.
+    if (shape) {
+        // Apply `filter` to the table data to only keep the
+        // rows where the `datetime` value matches the filter value
+        filteredData = filteredData.filter(row => row.shape === shape);
 
 // 3. Use this function to update the filters. 
 function updateFilters() {
 
     // 4a. Save the element that was changed as a variable.
-
+    
     // 4b. Save the value that was changed as a variable.
 
     // 4c. Save the id of the filter that was changed as a variable.
